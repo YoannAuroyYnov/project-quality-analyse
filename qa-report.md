@@ -30,6 +30,12 @@
 
 **Justification** : La proportion de test est exellente et atteint quasiment 100% de la code base. La documentation est très complète, chaque fonction / methode dispose d'une documentation JSDOC.
 
+Exemple de documentation jsdoc:
+![image](./assets/Capture%20d’écran%202025-11-28%20à%2016.26.10.png)
+
+Résultat du script `pnpm test-cov`
+![image](./assets/Capture%20d’écran%202025-11-28%20à%2016.23.21.png)
+
 ---
 
 ### 2.2 Fiabilité (Reliability) - Note : 4/5
@@ -45,6 +51,8 @@
 
 **Justification** : La simplicité de l'architecture et la mise en place d'une CI/CD sur plusieurs versions de node apportent une fiabilité importante. En revanche, il n'y a pas de logs et les actions passées ne sont pas consignées.
 
+- [>> voir les workflows](https://github.com/expressjs/express/tree/master/.github/workflows)
+
 ---
 
 ### 2.3 Sécurité (Security) - Note : 3/5
@@ -59,6 +67,12 @@
 - ❌ Pas de rate limiting, de validation des données ou CORS.
 
 **Justification** : Faible équilibre dans la sécurité, plusieurs aspects sont délégués à l'utilisateur, comme le rate limiting, la validation des données ou la protection contre les CORS. La sécurisation des dépendences est plutot forte, aucune vulnérabilité détectée lors de l'audit avec `npm`
+
+Resultat du script `pnpm audit`
+![image](./assets/Capture%20d’écran%202025-11-28%20à%2016.23.55.png)
+
+Séparation des dépendences de developpement
+![image](./assets/Capture%20d’écran%202025-11-28%20à%2016.24.33.png)
 
 ---
 
